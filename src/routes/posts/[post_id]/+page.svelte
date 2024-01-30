@@ -2,28 +2,33 @@
 	export let data;
 </script>
 
-<main>
-	<a href="/posts" style="display:block;margin-bottom:20px;">Back to posts</a>
+<a href="/posts" class="text-sm underline font-raleway block text-blue p-5">
+	Back to Posts
+</a>
 
-	<section>
-		<h1>{data.post.title}</h1>
-		<p>{data.post.body}</p>
+<section class="px-5 font-raleway">
+	<h1 class="text-2xl font-bold mb-2">{data.post.title}</h1>
+	<p class="font-light max-w-[55rem] mb-2">{data.post.body}</p>
 
-		<p>tags: {data.post.tags}</p>
+	<p class="mb-2">
+		<span class="font-semibold">tags:</span>
+		{#each data.post.tags as tag (tag)}
+			<span class="bg-gray-50 text-sm p-1">{tag}</span>
+		{/each}
+	</p>
 
-		<hr />
-		<p>Comments ({data.post.comments.length})</p>
-		<!-- Comments -->
-		<div>
-			{#each data.post.comments as comment (comment.id)}
-				<article class="comment">
-					<small>@{comment?.user.username}</small>
-					<p>{comment.body}</p>
-				</article>
-			{/each}
-		</div>
-	</section>
-</main>
+	<hr />
+	<p>Comments ({data.post.comments.length})</p>
+	<!-- Comments -->
+	<div>
+		{#each data.post.comments as comment (comment.id)}
+			<article class="comment">
+				<small>@{comment?.user.username}</small>
+				<p>{comment.body}</p>
+			</article>
+		{/each}
+	</div>
+</section>
 
 <style>
 	.comment {
