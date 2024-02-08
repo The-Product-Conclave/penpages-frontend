@@ -1,0 +1,71 @@
+{
+	"$schema": "https://biomejs.dev/schemas/1.5.3/schema.json",
+	"organizeImports": {
+		"enabled": true
+	},
+	"formatter": {
+		"lineWidth": 100,
+		"ignore": ["node_modules", "build", ".husky"]
+	},
+	"linter": {
+		"ignore": ["node_modules", "build", ".husky"],
+		"rules": {
+			"recommended": true,
+			"a11y": {
+				"recommended": true
+			},
+			"correctness": {
+				"recommended": true,
+				"noNewSymbol": "warn",
+				"noUndeclaredVariables": "error",
+				"noUnusedVariables": "error",
+				"useHookAtTopLevel": "error"
+			},
+			"performance": {
+				"recommended": true
+			},
+			"security": {
+				"recommended": true
+			},
+			"suspicious": {
+				"recommended": true,
+				"noApproximativeNumericConstant": "error",
+				"noConsoleLog": "warn",
+				"noMisrefactoredShorthandAssign": "error"
+			},
+			"style": {
+				"recommended": true,
+				"noImplicitBoolean": "error",
+				"noNamespace": "warn",
+				"noNegationElse": "warn",
+				"noRestrictedGlobals": "warn",
+				"noShoutyConstants": "error",
+				"useBlockStatements": "warn",
+				"useCollapsedElseIf": "warn",
+				"useFragmentSyntax": "warn",
+				"useNamingConvention": "error"
+			},
+			"complexity": {
+				"recommended": true,
+				"noVoid": "error",
+				"useSimplifiedLogicExpression": "warn"
+			},
+			"nursery": {
+				"recommended": true,
+				"noDuplicateJsonKeys": "error",
+				"noEmptyBlockStatements": "error",
+				"noUnusedImports": "warn",
+				"noUnusedPrivateClassMembers": "error",
+				"noUselessLoneBlockStatements": "error",
+				"useAwait": "warn",
+				"useImportRestrictions": "warn",
+				"noGlobalAssign": "error",
+				"noGlobalEval": "error",
+				"noInvalidUseBeforeDeclaration": "error",
+				"noUselessTernary": "error",
+				"useForOf": "warn",
+				"useFilenamingConvention": "off"
+			}
+		}
+	}
+}
