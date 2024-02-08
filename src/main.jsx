@@ -1,4 +1,5 @@
 import React from "react";
+// biome-ignore lint/style/useNamingConvention: <explanation>
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
